@@ -1,0 +1,175 @@
+{% extends 'detail-base.html' %}
+{% load staticfiles %}
+{% block title %}个人中心{% endblock %}
+
+{% block custom_bread %}
+<section>
+	<div class="wp">
+		<ul  class="crumbs">
+			<li><a href="{% url 'index' %}">首页</a>></li>
+            <li><a href="{% url 'operation:user_info' %}">个人中心</a>></li>
+		</ul>
+	</div>
+</section>
+{% endblock %}
+
+
+{% block content %}
+    <div class="right" >
+		<div class="personal_des Releasecont">
+			<div class="head">
+				<h1>我的消息</h1>
+			</div>
+
+		</div>
+		<div class="personal_des permessage">
+			<div class="head">
+				<ul class="tab_header messagehead">
+					<li class="active"><a href="/user/message/">个人消息</a> </li>
+					<li ><a href="/user/message/?type=sys">系统通知</a></li>
+				</ul>
+
+				<ul class="fr option">
+					<li><label><input class="selectall" type="checkbox"/> 全选</label></li>
+					<li class="delete jsDeleteMsg"></li>
+				</ul>
+
+			</div>
+			<div class="messagelist">
+                    <div class="messages">
+                        <label class="fl">
+                            <input name="my_message_id" class="checkbox" type="checkbox" data-value="199"/>
+                        </label>
+
+                        <div class="fr">
+                            <div class="top"><span class="fl time">2016-06-14 21:55</span><span class="fr btn foldbtn"></span></div>
+                            <p>
+                                感谢你注册慕学网在这里你将学习到最新最全的技术
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="messages">
+                        <label class="fl">
+                            <input name="my_message_id" class="checkbox" type="checkbox" data-value="186"/>
+                        </label>
+                        <div class="fr">
+                            <div class="top"><span class="fl time">2016-06-13 23:59</span><span class="fr btn foldbtn"></span></div>
+                            <p>
+                                bobby 于5分钟前回复了你对<a href="/company/14/">django实战项目</a>的评论
+                            </p>
+                        </div>
+                    </div>
+                <div class="messages">
+
+                    <label class="fl">
+                        <input name="my_message_id" class="checkbox" type="checkbox" data-value="199"/>
+                    </label>
+
+                    <div class="fr">
+                        <div class="top"><span class="fl time">2016-06-14 21:55</span><span class="fr btn foldbtn"></span></div>
+                        <p>
+                            感谢你注册慕学网在这里你将学习到最新最全的技术
+                        </p>
+                    </div>
+                </div>
+
+                <div class="messages">
+                    <label class="fl">
+                        <input name="my_message_id" class="checkbox" type="checkbox" data-value="186"/>
+                    </label>
+                    <div class="fr">
+                        <div class="top"><span class="fl time">2016-06-13 23:59</span><span class="fr btn foldbtn"></span></div>
+                        <p>
+                            bobby 于5分钟前回复了你对<a href="/company/14/">django实战项目</a>的评论
+                        </p>
+                    </div>
+                </div>
+                <div class="messages">
+
+                    <label class="fl">
+                        <input name="my_message_id" class="checkbox" type="checkbox" data-value="199"/>
+                    </label>
+
+                    <div class="fr">
+                        <div class="top"><span class="fl time">2016-06-14 21:55</span><span class="fr btn foldbtn"></span></div>
+                        <p>
+                            感谢你注册慕学网在这里你将学习到最新最全的技术
+                        </p>
+                    </div>
+                </div>
+
+                <div class="messages">
+                    <label class="fl">
+                        <input name="my_message_id" class="checkbox" type="checkbox" data-value="186"/>
+                    </label>
+                    <div class="fr">
+                        <div class="top"><span class="fl time">2016-06-13 23:59</span><span class="fr btn foldbtn"></span></div>
+                        <p>
+                            bobby 于5分钟前回复了你对<a href="/company/14/">django实战项目</a>的评论
+                        </p>
+                    </div>
+                </div>
+
+                <div class="messages">
+
+                    <label class="fl">
+                        <input name="my_message_id" class="checkbox" type="checkbox" data-value="199"/>
+                    </label>
+
+                    <div class="fr">
+                        <div class="top"><span class="fl time">2016-06-14 21:55</span><span class="fr btn foldbtn"></span></div>
+                        <p>
+                            感谢你注册慕学网在这里你将学习到最新最全的技术
+                        </p>
+                    </div>
+                </div>
+
+                <div class="messages">
+                    <label class="fl">
+                        <input name="my_message_id" class="checkbox" type="checkbox" data-value="186"/>
+                    </label>
+                    <div class="fr">
+                        <div class="top"><span class="fl time">2016-06-13 23:59</span><span class="fr btn foldbtn"></span></div>
+                        <p>
+                            bobby 于5分钟前回复了你对<a href="/company/14/">django实战项目</a>的评论
+                        </p>
+                    </div>
+                </div>
+
+
+			</div>
+
+                <ul class="option fl">
+                    <li><label><input class="selectall" type="checkbox"/> 全选</label></li>
+                    <li class="delete jsDeleteMsg"></li>
+                </ul>
+
+			<div class="pageturn pagerright">
+                <ul class="pagelist">
+
+
+
+
+                                <li class="active"><a href="?page=1">1</a></li>
+
+
+
+
+
+                                <li><a href="?page=2" class="page">2</a></li>
+
+
+
+
+                        <li class="long"><a href="?page=2">下一页</a></li>
+
+
+                </ul>
+            </div>
+		</div>
+
+	</div>
+{% endblock %}
+
+

@@ -1,0 +1,78 @@
+@charset "utf-8";
+div,ul,li,img,dl,dt,dd,h1,h2,h3,h4,h5,p,input{
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+.margin_center{/*居中*/
+	margin: 0 auto;
+}
+.position_a{/*绝对定位*/
+	position: absolute;
+}
+.position_r{/*相对定位*/
+	position: relative;
+	
+}
+.float_l{/*左浮动*/
+	float: left;
+}
+.float_r{/*右浮动*/
+	float: right;
+}
+.ul_float li{/*ul下的li浮动*/
+	float: left;
+}
+.clearfix:after {/*清除浮动*/
+   content:""; 
+   display: block; 
+   clear:both; 
+}
+.overflow_h{
+	overflow: hidden;
+}
+.text_overfow{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+input:focus{ outline:none; }/*直接控制input标签聚焦不出现默认边框*/
+.cursor_p{
+	cursor: pointer;/*鼠标变小手*/
+}
+
+
+/***************以上可在不同项目重复使用**************/
+body{
+	font:12px Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+	font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    font-stretch: normal;
+}
+.span_I{
+	display: inline-block;
+	margin:0 5px;
+}
+a{
+	color:#000000;
+	text-decoration: none;
+}
+.width_g{
+	width:980px;
+	margin: 0 auto;
+}
+.font_hui{
+	color:#959595;
+}
+.font_fen{
+	color: #ea759f;
+}
+.font_lan{
+	color:#00a1d6;
+}
+.hover_lan:hover{
+	color:#00a1d6;
+	transition: color 0.3s;
+}

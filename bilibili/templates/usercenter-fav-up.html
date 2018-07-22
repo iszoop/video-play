@@ -1,0 +1,80 @@
+{% extends 'detail-base.html' %}
+{% load staticfiles %}
+{% block title %}个人中心{% endblock %}
+
+{% block custom_bread %}
+<section>
+	<div class="wp">
+		<ul  class="crumbs">
+			<li><a href="{% url 'index' %}">首页</a>></li>
+            <li><a href="{% url 'operation:user_info' %}">个人中心</a>></li>
+		</ul>
+	</div>
+</section>
+{% endblock %}
+
+{% block content %}
+     <div class="right" >
+            <div class="personal_des Releasecont">
+                <div class="head">
+                    <h1>我的收藏</h1>
+                </div>
+
+            </div>
+            <div class="personal_des permessage">
+                <div class="head">
+                    <ul class="tab_header messagehead">
+                        <li ><a href="{% url 'operation:fav_video' %}">视频收藏 </a></li>
+                        <li class="active"><a href="{% url 'operation:fav_up' %}">我的关注</a></li>
+                    </ul>
+                </div>
+                <div class="messagelist">
+
+                    <div class="messages butler_list company company-fav-box">
+                        <dl class="des fr">
+                            <dt>
+                                <a href="/company/19/">
+                                    <img width="160" height="90" class="scrollLoading" data-url="../images/mysql.jpg" src="../images/pixel.gif"/>
+                                </a>
+                            </dt>
+                            <dd>
+                                <h1><a href="/company/19/">慕课网</a></h1>
+                                <div class="pic fl" style="width:auto;">
+
+                                    <img src="../images/authentication.png"/>
+
+
+                                    <img src="../images/gold.png"/>
+
+                                </div>
+                                <span class="c8 clear">四川省-成都市-高新区 高新区府城大道西段399号</span>
+                                <div class="delete jsDeleteFav" data-favid="19"></div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="messages butler_list company company-fav-box">
+                        <dl class="des fr">
+                            <dt>
+                                <a href="/company/19/">
+                                    <img width="160" height="90" class="scrollLoading" data-url="../images/mysql.jpg" src="../images/pixel.gif"/>
+                                </a>
+                            </dt>
+                            <dd>
+                                <h1><a href="/company/19/">慕课网</a></h1>
+                                <div class="pic fl" style="width:auto;">
+
+                                    <img src="../images/authentication.png"/>
+
+
+                                    <img src="../images/gold.png"/>
+
+                                </div>
+                                <span class="c8 clear">四川省-成都市-高新区 高新区府城大道西段399号</span>
+                                <div class="delete jsDeleteFav" data-favid="19"></div>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}

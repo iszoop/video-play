@@ -1,0 +1,6826 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>仿哔哩哔哩 (゜-゜)つロ 干杯~-bilibili</title>
+		<!--使用最高IE版本有Chrome使用Chrome-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!--双核浏览器优先使用Chrome内核-->
+		<meta name="renderer" content="webkit">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/css.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/hover.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/lunbo.js' %}"></script>
+	</head>
+	<body>
+		<div class="header_f position_r">
+			<div class="header width_g">
+				<ul class="header_left ul_float">
+					<li class="zhuzhan"><span></span><a href="#">主站</a></li>
+					<li><a href="#">画友</a></li>
+					<li class="youxi position_r">
+						<a href="#">游戏中心</a>
+						<div class=" position_a">
+							<div class="youxi_left">
+								<img src="images/youxi1.jpg"/>
+								<span>命运-冠位指定（Fate/GO）</span>
+								<ul>
+									<li><a href="#">
+										<img src="images/youxi2.png"/>
+										<span>碧蓝航线</span>
+									</a>
+										
+									</li>
+									<li>
+										<a href="#">
+											<img src="images/youxi3.png"/>
+											<span>崩坏 3</span>
+										</a>
+										
+									</li>
+									<li>
+										<a href="#">
+											<img src="images/youxi4.png"/>
+											<span>影之诗</span>
+										</a>
+										
+									</li>
+								</ul>
+							
+								</div>
+							
+							<div class="youxi_right">
+								<div><a href="#" style="color: #00a1d6 !important;">游戏论坛</a></div>
+								<ul>
+									<li>
+										<a href="#">半世界之旅</a>
+									</li>
+									<li>
+										<a href="#">梦间集天鹅座</a>
+									</li>
+									<li>
+										<a href="#">明日方舟</a>
+									</li>
+									<li>
+										<a href="#">野良神：宿命</a>
+									</li>
+									<li>
+										<a href="#">BanG Dream！</a>
+									</li>
+									<li>
+										<a href="#">时之歌</a>
+									</li>
+									<li>
+										<a href="#">星耀少女</a>
+									</li>
+								</ul>
+								<ul class="youxi_img">
+									<li><img src="images/youxi5.png"/></li>
+									<li><img src="images/youxi6.png"/></li>
+									<li><img src="images/youxi7.png"/></li>
+									<li><img src="images/youxi8.png"/></li>
+									<li><img src="images/youxi9.png"/></li>
+									<li><img src="images/youxi10.png"/></li>
+									<li><img src="images/youxi11.png"/></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="zhibo position_r">
+						
+						<a href="#">直播</a>
+						<div class="position_a">
+							<div class="zhibo_title font_fen">热门直播：</div>
+								<div class="zhibo_title font_fen">精彩活动：</div>
+								<div class="clearfix"></div>
+							<div class="zhibo_left float_l">
+								<ul>
+									<li>
+										<img src="images/zhibo6.gif"/>
+										<i>LIVE</i>
+										<p>魏公是狼改</p>
+									</li>
+									<li>
+										<img src="images/zhibo1.jpg"/>
+										<i>LIVE</i>
+										<p>魏公是狼改</p>
+									</li>
+									<li>
+										<img src="images/zhibo2.jpg"/>
+										<i>LIVE</i>
+										<p>魏公是狼改</p>
+									</li>
+									<li>
+										<img src="images/zhibo3.jpg"/>
+										<i>LIVE</i>
+										<p>魏公是狼改</p>
+									</li>
+									<li>
+										<img src="images/zhibo4.jpg"/>
+										<i>LIVE</i>
+										<p>魏公是狼改</p>
+									</li>
+									<li>
+										<img src="images/zhibo5.jpg"/>
+										<i>LIVE</i>
+										<p>魏公是狼改</p>
+									</li>
+								</ul>
+							</div>
+							<div class="zhibo_right float_r">
+								<ul>
+									<li><a href="#"><img src="images/zhibo7.jpg"/></a></li>
+								</ul>
+
+							</div>
+						</div>
+					</li>
+					<li><a href="#">会员购</a></li>
+					<li><a href="#">BML</a></li>
+					<li><a href="#">BW</a></li>
+					<li class="xiazai position_r">
+						<span></span>
+						<a href="#">下载app</a>
+						<div class="position_a">
+							<div class="apper"></div>
+						</div>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+				
+				<ul class="header_right ul_float">
+
+
+					<li class="akari position_r cursor_p">
+						<div >
+							<img class="touxiang " src="images/akari.jpg"/>
+						</div>
+						<div class="position_a touxiang_ew">
+							<p>登录后你可以：</p>
+							<div>
+								<ul class="position_r ul_float">
+									<li class="position_a"><img src="images/danmu.png"/></li>
+									<li class="position_a"><img src="images/danmu.png"/></li>
+								</ul>
+							</div>
+							<a href="#" >登录</a>
+							<p>没有账号？ <span class="font_lan">立即注册</span></p>
+						</div>
+					</li>
+					<li class="position_r lishi"><a href="#">历史</a>
+						<div class="lishi_ew position_a">
+							<h3>登录后有更多功能哦~</h3>
+							<ul>
+								<li><a href="#">哪种画风最吃香？抄袭画风算侵权吗？如何找到属于自己的画风？【抖抖村】</a> <span class="guanbi"><span><i></i><i></i></span></span></li>
+								<li><a href="#">哪种画风最吃香？抄袭画风算侵权吗？如何找到属于自己的画风？【抖抖村】</a> <span class="guanbi"><span><i></i><i></i></span></span></li>
+							</ul>
+							<a href="#">登录</a>
+							<p><a href="#">查看更多 ></a></p>
+						</div>
+					</li>
+					<li id="tougao" class=" position_r cursor_p">
+						<span>投稿</span>
+						<ul class="ul_float position_a">
+							<li>
+								<a href="#">
+									<img src="images/tougao1.png"/>
+									<span class="font_fen">专栏投稿</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/tougao2.png"/>
+									<span class="font_fen">音频投稿</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/tougao3.png"/>
+									<span class="font_fen">视频投稿</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/tougao4.png"/>
+									<span class="font_fen">投稿管理</span>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="images/tougao5.png"/>
+									<span class="font_fen">创作中心</span>
+								</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<div class=" clearfix"></div>
+				
+			</div>
+			<div class="search width_g">
+				<form action="#" method="post" class="float_r">
+	            		<input type="text" placeholder="恭喜RNG！我们是冠军！" class="float_l" />
+	            		<input type="submit" value=" "  class="float_l"/>
+	            	</form>
+	            	<a href="#" class="float_r font_fen">排行榜</a>
+	            	
+	            </div>
+			<div class="header_bg position_a"></div>
+            
+		</div>
+		<div class="nav width_g">
+			<ul class="ul_float  float_l">
+				<li class="sy">
+					<a href="#">
+						<div class="sy_bg"></div>
+						<div>首页</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>动画</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">MAD-AMV</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">MMD·3D</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">短片·手书·配音</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">综合</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>番剧</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">连载动画</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">完结动画</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">资讯</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">官方延伸</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">新番时间表</div>								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">番剧索引</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>国创</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">国产动画</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">国产原创相关</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">布袋戏</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">资讯</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">新番时间表</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">国产动画索引</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>音乐</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">原创音乐</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">翻唱</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">VOCALOID</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">演奏</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">三次元音乐</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">OP/ED/OST</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">音乐选集</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>舞蹈</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">宅舞</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">三次元舞蹈</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">舞蹈教程</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>游戏</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">单机游戏</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">电子竞技</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">手机游戏</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">网络游戏</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">桌游棋牌</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">GMV</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">音游</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">Mugen</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>科技</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">趣味科普人文</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">野生技术协会</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">演讲·公开课</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">星海</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">数码</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">机械</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">汽车</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>鬼畜</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">鬼畜调教</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">音MAD</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">人力VOCALOID</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">教程演示</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>生活</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">搞笑</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">日常</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">美食圈</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">动物圈</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">手工</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">绘画</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">ASMR</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">运动</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">其他</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>时尚</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">美妆</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">服饰</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">健身</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">资讯</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>广告</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>娱乐</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">综艺</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">明星</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">Korea相关</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="nav_title"><span>457</span></div>
+						<div>影视</div>
+						<ul class="hd">
+							<li>
+								<div class="hd_l">影视杂谈</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">影视剪辑</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">短片</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">预告·资讯</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">特摄</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+			</ul>
+			<ul class="ul_float float_l">
+				<li class="fy">
+					<a href="#">
+						<div class="fy_title"></div>
+						<div>放映厅</div>	
+						<ul class="hd">
+							<li>
+								<div class="hd_l">纪录片</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">电影</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">电视剧</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li class="zl">
+					<a href="#">
+						<div class="zl_bg"></div>
+						<div>专栏</div>	
+					</a>
+				</li>
+				<li class="gc">
+					<a href="#">
+						<div class="gc_bg"></div>
+						<div>广场</div>	
+						<ul class="hd">
+							<li>
+								<div class="hd_l">会员购</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">活动中心</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">游戏中心</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">画友</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">芒果TV</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li class="zb">
+					<a href="#">
+						<div class="zb_bg"></div>
+						<div>直播</div>	
+						<ul class="hd">
+							<li>
+								<div class="hd_l">推荐主播</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">生活娱乐</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">绘画专区</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">唱见舞见</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">御宅文化</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">单机联机</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">网络游戏</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">电子竞技</div>
+								<div class="hd_r"></div>
+							</li>
+							<li>
+								<div class="hd_l">手游直播</div>
+								<div class="hd_r"></div>
+							</li>
+						</ul>
+					</a>
+				</li>
+				<li class="hw">
+					<a href="#">
+						<div class="hw_bg"></div>
+						<div>小黑屋</div>	
+					</a>
+				</li>
+			</ul>
+		</div>
+        {% block content %}
+		<div class="banner_box width_g cursor_p">
+			<div class="banner float_l">
+				<ul class="banner_img ul_float position_r">
+					<li><img src="images/banner5.jpg"/></li>
+					<li><img src="images/banner1.jpg"/></li>
+					<li><img src="images/banner2.png"/></li>
+					<li><img src="images/banner3.jpg"/></li>
+					<li><img src="images/banner4.jpg"/></li>
+					<li><img src="images/banner5.jpg"/></li>
+				</ul>
+				<ul class="banner_nav ul_float">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+				<ul class="banner_text position_a">
+					<li>我和我的小伙伴都惊呆了</li>
+					<li>彩姐请你看昼颜</li>
+					<li>2018动画艺术大赏情报公开</li>
+					<li>恭喜 RNG！我们是冠军！</li>
+					<li>BML BW预约优惠，限时发放~</li>
+				</ul>
+			</div>
+			<ul class=" banner_r ul_float float_l">
+				<li>
+					<a href="#">
+						<img src="images/banner_r6.jpg"/>
+						<div>
+							<p>【珂朵莉/周年纪念】致世界上最幸福的女孩</p>
+							<p>up主：黯淡神殇</p>
+							<p>播放：5.5万</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_r5.png"/>
+						<div>
+							<p>【珂朵莉/周年纪念】致世界上最幸福的女孩</p>
+							<p>up主：黯淡神殇</p>
+							<p>播放：5.5万</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_r4.jpg"/>
+						<div>
+							<p>【珂朵莉/周年纪念】致世界上最幸福的女孩</p>
+							<p>up主：黯淡神殇</p>
+							<p>播放：5.5万</p>
+						</div>
+					</a>
+				
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_r3.jpg"/>
+						<div>
+							<p>【珂朵莉/周年纪念】致世界上最幸福的女孩</p>
+							<p>up主：黯淡神殇</p>
+							<p>播放：5.5万</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_r2.jpg"/>
+						<div>
+							<p>【珂朵莉/周年纪念】致世界上最幸福的女孩</p>
+							<p>up主：黯淡神殇</p>
+							<p>播放：5.5万</p>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<img src="images/banner_r1.jpg"/>
+						<div>
+							<p>【珂朵莉/周年纪念】致世界上最幸福的女孩</p>
+							<p>up主：黯淡神殇</p>
+							<p>播放：5.5万</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="zhibo_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">正在直播</a></p></li>
+						<li><p class="font_hui float_l">当前共有<span class="font_lan">15267</span>个在线直播</p></li>
+						<li class="fire"><a href="#" class="font_hui">233秒居然还能做这些！</a></li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1546</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg1_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg2_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg3_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg4_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg4_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg5_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg6.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg6_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg7_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/zhibo_bg8.png) no-repeat;background-size: cover ;"></div>
+						<div class="mask" style="background: url(images/zhibo_bg8_1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="donghua_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">动画</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<h2>排行</h2>
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								全部
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								原创
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="fanju_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">番剧</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<h2>排行</h2>
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								全部
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								原创
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="guochuang_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">国创</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="yinyue_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">音乐</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="wudao_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">舞蹈</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="youxi_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">游戏</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="keji_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">科技</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="shenghuo_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">生活</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="guichu_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">鬼畜</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="shishang_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">时尚</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="guanggao_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">广告</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="yule_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">娱乐</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="dianying_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">电影</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="TV_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">TV 剧</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="yingshi_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">影视</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="jilupian_box width_g">
+			<div class="content float_l">
+				<div class="content_title">
+					<ul class="ul_float float_l">
+						<li class="name"><p class="font24 float_l"><a href="#" class="hover_lan">纪录片</a></p></li>
+						<li  class="tab float_l position_r">
+							<a href="#">
+								有新动态
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li class="tab  position_r">
+							<a href="#">
+								最新投稿
+								<!--
+                                <span></span>
+								<div></div>
+                                -->
+							</a>
+						</li>
+					</ul>
+					<ul class="ul_float float_r">
+						<li class="read_push">
+							<a href="#">
+								<div><span></span><b>1946</b>条新动态</div>
+							</a>
+						</li>
+						<li class="link_more"><a href="#"><p class="float_l">更多</p> <span></span></a></li>
+					</ul>
+				</div>
+				<ul class="pic ul_float">
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg1.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg1_1.jpg) no-repeat;" data-row="10" data-sum="35">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg2.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg2_1.jpg) no-repeat;" data-row="10" data-sum="92">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg3.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg3_1.jpg) no-repeat;" data-row="4" data-sum="4">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg4.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg4_1.jpg) no-repeat;" data-row="10" data-sum="49">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg5.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg5_1.jpg) no-repeat;" data-row="10" data-sum="65">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg6.png) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg6_1.jpg) no-repeat;" data-row="10" data-sum="11">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg7.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg7_1.jpg) no-repeat;" data-row="10" data-sum="19">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+					<li>
+						<div class="pic_img" style="background: url(images/donghua_bg8.jpg) no-repeat;background-size: cover ;"></div>
+						<div class="shipink">
+							<div class="shipin_top">
+								<div>
+									<span></span>
+								</div>
+							</div>
+							<div class="shipin" style="background: url(images/donghua_bg8_1.jpg) no-repeat;" data-row="10" data-sum="13">
+								
+							</div>
+						</div>
+						<div class="snum">
+							<div>
+								<span class="auther">霊雲</span>
+								<span class="online">
+									<i></i>
+									365
+								</span>
+							</div>
+							<p>男生ASMR 上舰521送手写情书啦</p>
+							<p class="num">娱乐·视频ASMR</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="Rankings float_l">
+				<div class="Rankings_nav">
+					<ul class="ul_float">
+						<li>
+							<a href="#">
+								直播排行
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								关注的主播
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								为你推荐
+								<span></span>
+								<div></div>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<ul class="Rankings_img ul_float">
+						<li class="Rankings_img1">
+							<ul>
+								<li>
+									<a href="#">
+										<span class="q3">1</span>
+										<img src="images/zhibo_r1.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">2</span>
+										<img src="images/zhibo_r2.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span class="q3">3</span>
+										<img src="images/zhibo_r3.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>4</span>
+										<img src="images/zhibo_r4.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>5</span>
+										<img src="images/zhibo_r5.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span>6</span>
+										<img src="images/zhibo_r6.jpg" />
+										<p>渔二夯dududu</p>
+										<i></i>
+										<em>5.1万</em>
+										<div>【撩】asmr娇软妹子，性感撩人~</div>
+									</a>
+								</li>
+							</ul>
+						</li>
+						<li class="Rankings_img2">
+							<span class="font_hui">正在加载...</span>
+						</li>
+						<li class="Rankings_banner">
+							<div>
+								<ul class="Rankings_banner_img ul_float">
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+									<li>
+										<img src="images/zhibo_banner1.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner2.jpg" />
+									</li>
+									<li>	<img src="images/zhibo_banner3.jpg" />
+									</li>
+								</ul>
+								<div class="Rankings_banner_nav ul_float">
+									<span></span>
+									<span></span>
+									<span></span>
+								</div>
+							</div>
+							<div>
+								<img src="images/pic_fl.png" />
+								<img src="images/pic_fr.png" />
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+        {% endblock %}
+		<div class="footer">
+			<div class="width_g">
+				<div>
+					<ul class="ul_float">
+						<li>
+							<dl>
+								<dt>bilibili</dt>
+								<dd>关于我们</dd>
+								<dd>联系我们</dd>
+								<dd>加入我们</dd>
+								<dd>友情链接</dd>
+								<dd>bilibili认证</dd>
+								<dd>Investor Relations</dd>
+							</dl>
+						</li>
+						<li>
+							<dl>
+
+								<dt>传送门</dt>
+								<dd>帮助中心</dd>
+								<dd>高级弹幕</dd>
+								<dd>活动专题页</dd>
+								<dd>侵权申诉</dd>
+								<dd>活动中心</dd>
+								<dd>用户反馈</dd>
+								<dd>论坛壁纸站</dd>
+								<dd>名人堂</dd>
+							</dl>
+						</li>
+						<li>
+							<img src="images/kehud.png"/>
+							<img src="images/xinlang.png"/>
+							<img src="images/wx.ed20cfb.png"/>
+						</li>
+					</ul>
+				</div>
+				<div></div>
+			</div>
+		</div>
+		<div class="nav_list">
+			<div>直播</div>
+			<div>动画</div>
+			<div>番剧</div>
+			<div>国创</div>
+			<div>音乐</div>
+			<div>舞蹈</div>
+			<div>游戏</div>
+			<div>科技</div>
+			<div>生活</div>
+			<div>鬼畜</div>
+			<div>时尚</div>
+			<div>广告</div>
+			<div>娱乐</div>
+			<div>电影</div>
+			<div>TV剧</div>
+			<div>影视</div>
+			<div>纪录片</div>
+			<div style="background: url(images/fh_top.png) no-repeat center center;"></div>
+		</div>
+		
+		<script type="text/javascript">
+			
+		</script>
+		<script type="text/javascript">
+			/*导航鼠标悬浮效果*/
+			/*游戏中心*/
+			header_hover('.youxi','.youxi div');//鼠标浮上的元素， 要显示的元素
+			youxi_right();//游戏右边鼠标浮上出图片
+			/*直播*/
+			header_hover('.zhibo','.zhibo>div');
+			/*app下载*/
+			header_hover('.xiazai','.xiazai div');
+			/*头像*/
+			header_hover('.akari','.touxiang_ew');
+			touxiang_dm();//弹幕轮播
+			/*历史*/
+			header_hover('.lishi','.lishi_ew');
+			guanbi();//删除按钮
+			/*投稿*/
+			header_hover('#tougao','#tougao ul');
+			/*banner轮播*/
+			banner_lb();
+			/*鼠标滚轮滚动到一定位置使其置顶*/
+			scroll('.nav_list',500,200)//要改变得元素类名，过度时间，改变元素的滚动条位置
+			/*内容区右侧轮播图*/
+			Rankings_lb();
+			/*内容区右侧鼠标悬浮*/
+			Rankings_hover('.zhibo_box');
+			Rankings_hover('.donghua_box');
+			Rankings_hover('.fanju_box');
+			Rankings_hover('.guochuang_box');
+			Rankings_hover('.yinyue_box');
+			Rankings_hover('.wudao_box');
+			Rankings_hover('.youxi_box');
+			Rankings_hover('.keji_box');
+			Rankings_hover('.shenghuo_box');
+			Rankings_hover('.guichu_box');
+			Rankings_hover('.shishang_box');
+			Rankings_hover('.guanggao_box');
+			Rankings_hover('.yule_box');
+			Rankings_hover('.dianying_box');
+			Rankings_hover('.TV_box');
+			Rankings_hover('.yingshi_box');
+			Rankings_hover('.jilupian_box');
+			/*内容区左侧图片鼠标浮上效果1*/
+			pic_hover1('.zhibo_box .pic li');
+			/*内容区左侧图片鼠标浮视频预览效果*/
+			pic_hover2('.shipink');
+		</script>
+	</body>
+</html>

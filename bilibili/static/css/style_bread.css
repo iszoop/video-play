@@ -1,0 +1,10 @@
+.crumbs {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #3a87ad;
+    letter-spacing: 2px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
